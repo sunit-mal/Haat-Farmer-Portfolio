@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/Payment.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Bootstrap.css' %}">
+    <title>Haat</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="pagebg">
+        <div class="container-fluid paymentBOX">
+            <div class="form-check">
+                <input class="form-check-input UPI" type="radio" name="exampleRadios" id="upi" value="option1">
+                <label class="form-check-label" for="exampleRadios1">
+                    UPI
+                </label>
+                <hr class="dropdown-divider">
+                <div id="upiid">
+                    <div class="input-group mb-3 upiID">
+                        <input type="text" class="form-control" placeholder="yourname">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control" placeholder="bankname">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input CARD" type="radio" name="exampleRadios" id="paymentBycard"
+                    value="option1">
+                <label class="form-check-label" for="exampleRadios1">
+                    Credit / Debit / ATM Card
+                </label>
+                <hr class="dropdown-divider">
+                <div class="carddetails" id="carddetails">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Account Holder Name"
+                            aria-describedby="basic-addon2">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Number</span>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">VALID TILL</span>
+                        <input type="text" class="form-control" placeholder="MM/YY" aria-label="Username">
+                        <span class="input-group-text">CVV</span>
+                        <input type="text" class="form-control" placeholder="000" aria-label="Server">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input cod" type="radio" name="exampleRadios" id="codcheck"
+                    value="option1">
+                <label class="form-check-label" for="exampleRadios1">
+                    Cash On Delivery
+                </label>
+                <div id="cod" class="cashOndelevery">
+                    <form>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="captcha">Default</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="captchaInput">
+                          </div>
+                    </form>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success" id="done">Process</button>
+            <button type="button" class="btn btn-primary" id="process">Process</button>
+            <br>
+        </div>
+    </div>
+</body>
+<script src="{% static 'JS/Bootstrap.js' %}"></script>
+<script src="{% static 'JS/payment.js' %}"></script>
+
+</html>

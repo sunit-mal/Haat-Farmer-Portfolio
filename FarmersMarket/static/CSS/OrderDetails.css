@@ -1,0 +1,29 @@
+body{
+    background-color: #36b54c !important;
+    background-image: url('../Media/OrderDetails.png');
+    background-size: 100%;
+    background-position-y: -160px;
+    color: #ffffff !important;
+}
+.order{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.order .orderBody{
+    margin: 5px;
+    background: #04b979c0 !important;
+    color: #2d2d2d !important;
+}
+.card{
+    background: transparent !important;
+    color: whitesmoke !important;
+    text-shadow: 0px 2px 10px gainsboro;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background-image: none;
+    }
+}

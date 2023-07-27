@@ -1,0 +1,47 @@
+body{
+    background-color: #35924f !important;
+    background-image: url('../Media/POst.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -160px;
+    color: #ffffff !important;
+}
+.pagebg{
+    padding: 30px;
+}
+.pagebg form div{
+    margin: 10px;
+}
+.pagebg form div label{
+    width: 150px;
+}
+.pagebg form div textarea{
+    height: 100px;
+    resize: both;
+}
+.pagebg form div button{
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+}
+.mybtn{
+    padding-left: 10pc;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+#data{
+    margin-left: 15pc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+    body{
+        background-color: #35924f !important;
+        background-image: none;
+    }
+    #data{
+        margin-left: 0pc;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+    }
+}

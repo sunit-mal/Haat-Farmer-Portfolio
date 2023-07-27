@@ -1,0 +1,48 @@
+body{
+    background-color: #ffffff !important;
+    background-image: url('../Media/Payment.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.pagebg{
+    font-family: 'Times New Roman', Times, serif !important;
+}
+.paymentBOX{
+    margin-top: 10% !important;
+    width: 60% !important;
+    
+}
+.form-control, .input-group-text{
+    background-color: aliceblue !important;
+}
+.form-check-label{
+    font-size: 22px;
+    font-weight: bold;
+}
+.btn{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+#upiid, .carddetails{
+    display: none;
+}
+#process{
+    display: none;
+}
+
+.form-check .cashOndelevery{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .paymentBOX{
+        margin-top: 0% !important;
+        width: 100% !important;
+    }
+    body{
+        background-color: #fff7f1 !important;
+        background-image: url('../Media/PaymentPhone.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}

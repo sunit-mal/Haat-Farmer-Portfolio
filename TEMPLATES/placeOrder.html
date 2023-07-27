@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/placeorder.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Bootstrap.css' %}">
+    <title>Haat</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="pagebg">
+        <form action="{% url 'placeOrder' id %}" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1" value="{{user.get_username}}" name="username" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Delivery Address</span>
+                    <input type="text" class="form-control" placeholder="delivery address" aria-label="Username"
+                        aria-describedby="basic-addon1" name="address" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Contect Number</span>
+                    <input type="text" class="form-control" placeholder="Number" aria-label="Contect Number"
+                        aria-describedby="basic-addon1" name="number" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Amount</span>
+                    <input type="text" class="form-control" placeholder="10kg" aria-label="Contect Number"
+                        aria-describedby="basic-addon1" name="amount" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="{% static 'JS/Bootstrap.js' %}"></script>
+
+</html>

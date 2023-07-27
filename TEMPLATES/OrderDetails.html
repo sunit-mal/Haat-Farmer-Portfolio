@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/OrderDetails.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Bootstrap.css' %}">
+    <title>Haat</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="pagebg">
+        <div class="card text-center">
+            <div class="card-header">
+                Profile
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Hello {{user.get_username}}</h5>
+                {% if yourDetails == 'Add' %}
+                <p class="card-text">Please add your Contect Details</p>
+                <a href="/Mydetails/" class="btn btn-primary">{{yourDetails}}</a>
+                {% else %}
+                <p class="card-text">Your Contect Details : {{yourDetails}}</p>
+                {% endif %}
+                <a href="{% url 'detailsDelete' user.get_username %}" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                <h2>
+                    Place Order
+                </h2>
+            </div>
+            <div class="card-body order">
+                {% for data in data %}
+                <div class="card orderBody" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Product name : {{data.productTitle}}</h5>
+                        <p class="card-text">Order Place By : {{data.orderuser}}</p>
+                        <p class="card-text">Delevery address : {{data.orderaddress}}</p>
+                        <p class="card-text">Contect Details : {{data.number}}</p>
+                        <p class="card-text">Amount : {{data.amount}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'JS/Bootstrap.js' %}"></script>
+
+</html>

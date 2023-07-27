@@ -1,0 +1,17 @@
+body{
+    background-color: #00190b !important;
+    background-image: url('../Media/FarmerDetails.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -20px;
+}
+.data{
+    margin: 10pc;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background-image: none;
+    }
+}

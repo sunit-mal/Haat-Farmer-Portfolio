@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/productUpload.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Bootstrap.css' %}">
+    <title>Haat</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="pagebg">
+        <div id="data">
+            <form action="/postProduct/{{user.get_username}}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div>
+                    <label>Product Image</label>
+                    <input type="file" name="img" id="">
+                </div>
+                <div>
+                    <label>Product Title</label>
+                    <input type="text" name="title" id="">
+                </div>
+                <div>
+                    <label>Product Details</label>
+                    <textarea name="details" cols="30" rows="10"></textarea>
+                </div>
+                <div class="mybtn">
+                    <button type="submit" class="btn btn-primary" >Post</button>
+                    <button type="reset"  class="btn btn-warning">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="{% static 'JS/Bootstrap.js' %}"></script>
+
+</html>

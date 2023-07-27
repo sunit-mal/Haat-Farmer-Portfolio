@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/farmerdetails.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Bootstrap.css' %}">
+    <title>Haat</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="pagebg">
+        <div class="data">
+            <form action="/addDetails/" method="post">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Contect Number</span>
+                    <input type="text" class="form-control" name="phnumber" placeholder="1234567890" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Village</span>
+                    <input type="text" class="form-control" name="vill" placeholder="Village" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Post</span>
+                    <input type="text" class="form-control" name="post" placeholder="Post" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">District</span>
+                    <input type="text" class="form-control" name="dist" placeholder="District" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">State</span>
+                    <input type="text" class="form-control" name="state" placeholder="State" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-warning">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="{% static 'JS/Bootstrap.js' %}"></script>
+
+</html>

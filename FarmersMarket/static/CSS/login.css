@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo Bhai');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+body{
+  background-color: #3f996e !important;
+  background-image: url('../Media/Login.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: -20px;
+}
+
+input:disabled {
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+input:disabled~.control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+input:checked:focus {
+  border: none;
+}
+
+input:active {
+  filter: brightness(90%)
+}
+
+
+input:focus {
+  border-color: transparent;
+  outline: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: #212529;
+  text-decoration: none
+}
+
+.col-md-7 {
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.751);
+  transition: all 0.3s ease;
+  padding: 20px;
+  background: #993F6A;
+  color: aliceblue;
+  border-radius: 10px;
+  width: 350px !important;
+  height: 450px !important;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.col-md-7 form {
+  padding: 20px;
+  text-align: left;
+}
+
+.col-md-7 form button {
+  margin-left: 70%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.751);
+  background-color: rgb(1, 219, 146);
+  color: black;
+}
+
+.form-group {
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-md-7 {
+    width: 320px !important;
+  }
+
+  .pagebg {
+    position: relative;
+    top: 10px;
+    left: 15%;
+  }
+
+  .body,
+  html {
+    background-size: 50%;
+    background-image: none;
+    background-color: #3f996e;
+  }
+  .col-md-7{
+    padding: 10px;
+  }
+  .row{
+    align-items: center;
+  }
+}

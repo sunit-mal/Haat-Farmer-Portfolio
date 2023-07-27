@@ -1,0 +1,37 @@
+body{
+    background-color: #00190b !important;
+    background-image: url('../Media/Background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -20px;
+}
+.pagebg{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.card{
+    margin: 15px;
+}
+.card-img-top{
+    overflow: hidden;
+    height: 193px;
+}
+.card-body .btn-primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    background-color: #022733 !important;
+    color: white !important;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background-image: none;
+        color: white !important;
+    }
+}

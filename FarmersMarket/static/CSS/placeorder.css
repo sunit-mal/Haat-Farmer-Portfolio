@@ -1,0 +1,21 @@
+body{
+    background-color: #b1c0dd !important;
+    background-image: url('../Media/placeOrder.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -20px;
+}
+.container div{
+    width: 50%;
+}
+.container{
+    margin-top: 5%;
+}
+@media screen and (max-width: 600px) {
+    body{
+        background-image: none;
+    }
+    .container div{
+        width: 100%;
+    }
+}

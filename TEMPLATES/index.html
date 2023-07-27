@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Bootstrap.css' %}">
+    <title>Haat</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="pagebg">
+        {% for Img in img%}
+        <div class="card" style="width: 18rem;">
+            <img src="{{Img.productImg.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{Img.ImgTitel}}</h5>
+                <p class="card-text">{{Img.about}}</p>
+                {% if request.user.is_staff %}
+                <a href="{% url 'deleteProduct' Img.id %}" class="btn btn-primary">Delete Product</a>
+                {% else %}
+                <a href="{% url 'orderplace' Img.id %}" class="btn btn-primary">Buy Now</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+<script src="{% static 'JS/index.js' %}"></script>
+<script src="{% static 'JS/Bootstrap.js' %}"></script>
+
+</html>
